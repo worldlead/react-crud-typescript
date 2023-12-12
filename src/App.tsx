@@ -7,6 +7,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import AddTutorial from "./components/AddTutorial";
 import Tutorial from "./components/Tutorial";
 import TutorialsList from "./components/TutorialsList";
+import AddUser from './components/AddUser';
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,11 @@ const App: React.FC = () => {
               Add
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className='nav-link' to={"/register"}>
+              Register
+            </Link>
+          </li>
         </div>
       </nav>
 
@@ -35,6 +41,7 @@ const App: React.FC = () => {
           <Route path="/tutorials" element={<TutorialsList/>} />
           <Route path="/add" element={<AddTutorial/>} />
           <Route path="/tutorials/:id" element={<Tutorial/>} />
+          <Route path="/register" element={<AddUser/>} />
         </Routes>
       </div>
     </div>
